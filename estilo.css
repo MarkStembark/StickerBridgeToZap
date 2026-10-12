@@ -1,0 +1,205 @@
+/* Reset e Fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: #0A0914; /* Preto cyber/escuro */
+    color: #FFFFFF;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Efeito de luz azul no fundo */
+.bg-glow {
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: min(600px, 80vw);
+    height: min(600px, 80vw);
+    background: radial-gradient(circle, rgba(37, 244, 238, 0.15) 0%, rgba(10, 9, 20, 0) 70%);
+    z-index: -1;
+    border-radius: 50%;
+    filter: blur(50px);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.accent {
+    color: #25F4EE; /* Azul ciano clean */
+}
+
+.nav-link {
+    color: #A0A0A5;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #FFFFFF;
+}
+
+/* Hero Section */
+.hero {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.badge {
+    background: rgba(37, 244, 238, 0.1);
+    color: #25F4EE;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border: 1px solid rgba(37, 244, 238, 0.2);
+}
+
+/* Título fluído que se adapta automaticamente a ecrãs pequenos e grandes */
+.main-title {
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    color: #A0A0A5;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 36px;
+    padding: 0 10px;
+}
+
+/* Botão de Download Responsivo */
+.download-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-download {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #12121A;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 24px 40px;
+    width: min(100%, 320px);
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.btn-download:hover {
+    border-color: #25F4EE;
+    box-shadow: 0 0 40px rgba(37, 244, 238, 0.2);
+    transform: translateY(-5px);
+}
+
+.btn-icon {
+    background: rgba(37, 244, 238, 0.1);
+    color: #25F4EE;
+    padding: 14px;
+    border-radius: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-text {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #55555A;
+    font-size: 0.85rem;
+}
+
+/* Botão Flutuante (Canto Inferior Direito) */
+.floating-btn {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background-color: rgba(37, 244, 238, 0.05);
+    color: #25F4EE;
+    border: 1px solid rgba(37, 244, 238, 0.2);
+    padding: 8px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.floating-btn:hover {
+    background-color: #25F4EE;
+    color: #0A0914;
+    box-shadow: 0 0 20px rgba(37, 244, 238, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Ajustes finos para telemóveis muito estreitos */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 16px 20px;
+    }
+    
+    .hero {
+        padding: 20px 12px;
+    }
+
+    .floating-btn {
+        bottom: 12px;
+        right: 12px;
+        padding: 6px 14px;
+        font-size: 0.8rem;
+    }
+}
